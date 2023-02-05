@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css ">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="shortcut icon" type="x-con" href="assests/Domino's_pizza_logo.svg.png">
+
+  <title> Dominos </title>
+</head>
+<style>
+  .row button {
+    border-radius: 2px;
+    font-family: 'proximaBold';
+    width: 360px;
+    height: 50px;
+    margin-left: 70px;
+  }
+
+  .a .li {
+    color: #5f88a3;
+    font-family: 'proximaSemiBold';
+    font-size: 15px;
+  }
+
+  /* external css: flickity.css */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    /* font-family: sans-serif;   */
+    overflow-x: hidden;
+  }
+
+  .carousel {
+    background: #EEE;
+  }
+
+  .carousel-cell {
+    width: 50%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: gallery-cell;
+  }
+
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(gallery-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+
+  .nav-link {
+    color: #5f88a3;
+    font-weight: bolder;
+    font-size: 14px;
+  }
+
+  .nav-item :hover {
+    color: #0d3593;
+  }
+
+  h4 {
+    color: #006491;
+    font-weight: 700;
+    font-size: 25px;
+  }
+
+  .sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+  .footer {
+    background-color: #1a2735;
+    height: 450px;
+    width: 100%;
+    padding-top: 60px;
+  }
+
+  .footer a {
+    text-decoration: none;
+
+
+  }
+
+  .footer h6 {
+    color: #546273;
+  }
+
+  .footer i {
+    color: #ffffff;
+    padding: 0px 9px 0px 0px;
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  pre {
+    color: white;
+    /* font-weight:bolder; */
+    font-size: 16px;
+    font-family: 'proximaNova';
+    justify-content: space-around;
+    display: flex;
+    line-height: 30px;
+  }
+
+  hr {
+    border: dotted 1px #526274;
+  }
+
+  .twink {
+    font-size: 12px;
+
+  }
+
+  .twink button {
+    background-color: #f3ecec;
+    margin: 3px;
+    border: 1px solid grey;
+
+  }
+</style>
+
+<body>
+  <!-- 1) Header navbar -->
+
+  <nav class="navbar navbar-expand-md bg-white navbar-white" style="justify-content:space-around;">
+    <a href="#">
+      <img src="assests/Logo.png" alt="logo">
+    </a>
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">OUR MENU</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">DOMINO'S STORES</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">GIFT CARD</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">CORPORATE ENQUIRY</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="#">CONTACT</a>
+      </li>
+      <a href="#">
+        <button type="button" class="btn btn-danger"
+          style="margin-left: 120px; border-radius: 3px ; background-color: #f3223b;">Download App</button>
+      </a>
+  </nav>
+  <br>
+
+  <!-- first row -->
+  <div class="container-fluid">
+    <div class="sticky-top">
+      <div class="row" style="background-color: #1a5ca3; margin-top: -20px; height: 320px;">
+        <div class="col-5 ">
+          <h2 style="color: #f2f5fc; margin-top: 50px; margin-left: 70px;">Domino's online ordering</h2>
+          <p style="margin-left: 70px; color: #47a0ff; font-size: 18px;">Yummy pizza delivered fast & fresh</p>
+          <button type="button" class="btn btn" style=" background-color: green; color: white;">ORDER ONLINE NOW
+          </button>
+
+          <img class="" src="assests/banner_brand_2.jpg" alt=""
+            style="margin-left: 70px;width: 360px; margin-top: 10px;">
+        </div>
+        <!-- cloud image  -->
+        <div class="col-7">
+          <img src="assests/header_bg dominos.png" alt="logo" style="width: 100%; height: 320px;">
+        </div>
+      </div>
+    </div>
+
+    <p style=" background-color: #eee; margin-top: 15px;"><a href="#"
+        style="text-decoration: none;font-size: 12px;padding-left: 10px;">Home</a></p><br>
+
+
+    <div class="container">
+      <h2 style="color: #708aa5;"><b>Coupons & Offers</b></h2><br>
+
+      <!-- Flickity HTML init -->
+      <!-- scroll images -->
+      <div class="carousel" data-flickity='{ "autoPlay": true }'>
+        <div class="carousel-cell-image"> <img src="assests/amazon_home_1.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+        <div class="carousel-cell-image"> <img src="assests/Home_Paytm-2.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+        <div class="carousel-cell-image"> <img src="assests/Home_airtel_3.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+        <div class="carousel-cell-image"> <img src="assests/Home_Freecharge_4.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+        <div class="carousel-cell-image"> <img src="assests/Dominos_Mobi_5.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+        <div class="carousel-cell-image"> <img src="assests/Home_payzapp_6.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+        <div class="carousel-cell-image"> <img src="assests/Home_au_7.jpg" alt=""
+            style="height: 250px; width: 600; padding-right: 20px;">
+        </div>
+      </div><br>
+      <br>
+      <br>
+
+      <!-- cards code -->
+      <div class="container">
+        <h4 style="color: #708aa5; font-size: 25px; font-weight: bold;">Explore</h4>
+
+        <div class="card-deck">
+          <div class="card bg-white">
+            <div class="card-body text-center">
+              <img src="assests/menu-1.png" alt="">
+              <h5>OUR MENU </h5>
+              <p class="card-text">Explore our range of delicious pizzas, delivered in 30 minutes!</p>
+            </div>
+            <button
+              style="border: 1px solid rgb(202, 201, 201); background-color: white; color: red;font-size: 14px; padding: 10px;font-weight: bold; width: 100%;">DISCOVER
+              PIZZA</button>
+            <!-- <button class="w3-button w3-block " style="border: 1px solid rgb(202, 201, 201); background-color: white; color: red;font-size: 14px; padding: 10px;font-weight: bold; width: 100%;">DISCOVER</button> -->
+          </div>
+          <div class="card bg-white">
+            <div class="card-body text-center">
+              <img src="assests/store -2 card.png" alt="">
+              <h5>NEARBY STORE </h5>
+              <p class="card-text">Find a Domino's pizza Restaurants near you </p>
+            </div>
+            <button
+              style="border: 1px solid rgb(202, 201, 201); background-color: white; color: red;font-size: 14px; padding: 10px;font-weight: bold; width: 100%;">FIND
+              DOMINO'S STORE</button>
+          </div>
+          <div class="card bg-white">
+            <div class="card-body text-center">
+              <img src="assests/birthday card -3.png" alt="">
+              <h5>BIRTHDAY PARTY </h5>
+              <p class="card-text">Celebrate the joy of birthday with fresh & hot pizzas </p>
+            </div>
+            <button
+              style="border: 1px solid rgb(202, 201, 201); background-color: white; color: red;font-size: 14px; padding: 10px;font-weight: bold; width: 100%;">BOOK
+              NOW</button>
+          </div>
+          <div class="card bg-white">
+            <div class="card-body text-center">
+              <img src="assests/catering card - 4.png" alt="">
+              <h5>CATERING</h5>
+              <p class="card-text">Live Domino's Kitchen for weddings corporate events </p>
+            </div>
+            <button
+              style="border: 1px solid rgb(202, 201, 201); background-color: white; color: red;font-size: 14px; padding: 10px;font-weight: bold; width: 100%;">BOOK
+              NOW</button>
+          </div>
+        </div>
+      </div><br>
+      <br>
+      <br>
+    </div>
+
+    <!-- row -2 mobile image -->
+
+    <div class="container-fluid" style="background-color: #f2f5fc;">
+      <div class="row">
+        <div class="col-6">
+          <img src="assests/new_app_img 1.png" alt="mobile app" style="margin-left: 110px;">
+        </div>
+        <div class="col-6">
+          <div class="row">
+            <div class="col-12">
+              <h2 style="margin-top: 70px; color: #59688c; font-weight:bolder;margin-left: 100px;">Unlock Exclusive
+                Offers</h2>
+              <p style="margin-left: 100px;color: #8899c0;font-size: 24px;">For lightning fast ordering experience <br>
+                download the Domino’s app</p>
+            </div>
+            <div class="row" style="margin-top: 40px;">
+              <div class="col-6">
+                <img src="assests/play_store.png" alt="" style="margin-left: 100px;">
+              </div>
+              <div class="col-6">
+                <img src="assests/app_store apple.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- paragraphs code -->
+    <div class="container-fluid" style="padding-left: 28px;">
+      <h4>Domino's Pizza: Delivering Happiness</h4> <br>
+      <p style="font-size: 15px;">
+        What’s better than having a crispy melty pizza, you ask?<br><br>
+
+        Having that crispy and melty pizza in the comfort of your own home with the ones you love, we say.<br><br>
+
+        With Domino's it is always “Rishton ka time”. Whether it's a treat for your promotion, a kid topping his class
+        or
+        winning the heart of your wife who is too tired to cook after a long day at work! A cheesy slice of
+        the best pizza is all one needs to put things into perspective and start any celebration. Plus, you do not even
+        need to rush to the restaurant to have one now. A call, a few clicks on our website or a few
+        touches on the mobile screen is all you have to do to have that tempting, light-on-the-pocket pizza at your
+        doorstep. <br><br>
+
+        There is something for everyone here. The vegetarians, non-vegetarians, the sides’ lovers and also the ones who
+        love to have something sweet by the time they reach the last bite of the last slice of pizza
+        slice.
+      </p>
+
+      <h4>What We Need - More Choice. More Fun.</h4> <br>
+      <p style="font-size: 15px;">No matter what the situation, pizza always helps. Especially a pizza that gives you
+        the freedom to choose your
+        toppings - from paneer, crisp capsicum, onion, grilled mushroom, golden corn, black olives,
+        fresh tomato, red paprika, jalapeno, paneer tikka and extra cheese to non-veg toppings such as pepper barbeque
+        chicken, peri-peri chicken, grilled chicken rasher, chicken sausage or chicken tikka- the
+        options are almost endless, anything and everything you can think of that too on top of the crust of your choice
+        -
+        New hand-tossed crust, wheat thin crust, cheese burst crust, classic hand-tossed crust or a
+        fresh pan pizza. Because just like a pizza, Domino's understands you. <br><br>
+
+        And to shoo away those end-of-the-month blues while placing your order with our pizza restaurant, check out the
+        everyday pizzas from pizza mania combos with everyday value offer of 2 pizzas starting at
+        just ₹99 (regular size) and ₹199 (medium size) each.</p>
+
+      <h4>The Promise Of 30-Minute Delivery</h4> <br>
+      <p style="font-size: 15px;">The icing on the cake or more aptly the extra cheese on your already fabulous pizza is
+        that Domino’s takes only
+        half an hour for its pizza delivery service. Don’t believe us? Time it if you please. With 1250+
+        stores present all over India, you can have a Domino’s pizza even while traveling on a train. Yes, you are
+        reading
+        it right, you can enjoy pizza on train too. <br><br>
+
+        So stop googling for the “pizza shops near me” and order from your nearest pizza outlet to have a hot box of
+        pizza
+        on your table in the next 30 minutes, or berth at the next halting station.</p>
+
+      <h4>Franchise Information</h4> <br>
+      <p style="font-size: 15px;">Jubilant FoodWorks Limited is the Master Franchisee of Domino’s Pizza in India,
+        Bangladesh, Sri Lanka and Nepal
+        with sole and exclusive rights to own and operate Domino’s Pizza restaurants in these
+        territories. For any franchise-related queries, kindly email us directly at dominos.franchise@jublfood.com
+        <br><br>
+
+        We have come across a few instances of fraudsters posing as Jubilant FoodWorks and asking for payment from
+        gullible investors against the promise of a Domino’s franchise. We therefore caution and urge
+        all interested parties to be careful and vigilant and interact only with the email id mentioned above. Anyone
+        dealing with such fraudsters shall be doing so on their own peril, risk and consequences. <br><br>
+
+        Neither Jubilant FoodWorks nor its Directors/Officers shall be responsible for any loss, harm, damage or fraud
+        that occurs or may occur or arise to any person who decides to access such fake websites, or
+        deal with them.
+
+      </p>
+
+      <br>
+      <br>
+
+      <!--simple Button's  -->
+      <div class="twink">
+
+        <button type="button">Menu</button>
+        <button type="button">Veg Pizza</button>
+        <button type="button">Chicken Pizza</button>
+        <button type="button">Pasta</button>
+        <button type="button">Pizza Crust</button>
+        <button type="button">Beverages</button>
+        <button type="button">Pizza Mania</button>
+        <button type="button">Burger Pizza</button>
+        <button type="button">Farm House pizza</button>
+        <button type="button">Veg Margherita Pizza</button>
+        <button type="button">Cheese Corn Pizza</button>
+        <button type="button">Double Cheese Margherita Pizza</button>
+        <button type="button">Paneer Makhani Pizza</button>
+        <button type="button">Choco Lava Cake</button>
+        <button type="button">Roasted Chicken Wings Peri Peri</button>
+        <button type="button">Garlic Bread</button>
+        <button type="button">Stuffed Garlic Bread</button>
+        <button type="button">Paneer Zingy Parcel</button>
+        <button type="button">Fresh Pan Pizza </button>
+        <button type="button">New Hand Tossed Pizza</button>
+        <button type="button">Classic Hand Tossed Pizza</button>
+        <button type="button">Golden Corn Pizza</button>
+        <button type="button">Extra Cheese Pizza</button>
+        <button type="button"> Wednesday Offer - Pizza Buy 1 Get 1</button><br><br>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <!-- Footer  -->
+  <div class="footer">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- column - 1 -->
+        <div class="col">
+          <a href="#" style="color:rgb(54, 62, 73); font-size: 18px; font-weight:bolder;margin-left: 65px;">Menu</a>
+          <a href="#">
+            <pre>
+
+Veg Pizza
+Chicken Pizza
+Pasta
+Pizza Crust
+Beverages
+Pizza Mania
+Burger Pizza
+            </pre>
+          </a>
+        </div>
+        <!-- column - 2 -->
+        <div class="col">
+          <h6 style="margin-left: 75px;">COMPANY</h6>
+          <a href="#">
+            <pre>
+
+Blog
+Investor
+FeedBack
+Ads 
+             </pre>
+          </a>
+        </div>
+        <!-- column -3  -->
+        <div class="col">
+          <h6 style="margin-left: 40px;">PIZZA RESTAURANTS</h6>
+          <a href="#">
+            <pre>
+Restaurants Near Me
+Pizza Near Me
+Food Near Me
+Food Delivery
+Italian Food
+Order Food Online
+            </pre>
+          </a>
+        </div>
+        <!-- column - 4 -->
+        <div class="col">
+          <h6 style="margin-left: 40px;">ABOUT</h6>
+          <a href="#">
+            <pre>
+
+Gift card
+Card Balance Enquiry
+FAQ
+Virtual Pizza Party
+E-Gift Vouchers
+                </pre>
+          </a>
+        </div>
+        <!-- column - 5 -->
+        <div class="col">
+          <h6 style="margin-left: 45px;">LEGAL</h6>
+          <a href="#">
+            <pre>
+
+Disclaimer
+Terms & Conditions
+Privacy Policy
+                </pre>
+          </a>
+        </div>
+        <!-- column- 6 -->
+        <div class="col">
+          <h6>SOCIAL MEDIA</h6>
+
+          <i class="fa-brands fa-square-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <img src="assests/hello_dominos_20210615.png" alt="Dominos" style="margin-top: 20px;width: 110px;">
+        </div>
+        <hr>
+        <p style=" color:#5c6f83; text-align: center;font-size: 14px;">All Rights Reserved. Copyright © Jubilant
+          FoodWorks Ltd.</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+</body>
+
+</html>
